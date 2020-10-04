@@ -1,9 +1,9 @@
 function countAvailableDays(watchmenCount = 0, days = 0, startingDays = [], endDays = []) {
     let daysWithwatchmen = 0;
     if (watchmenCount > 0 && days > 0 && startingDays.length > 0) {
-        daysWithwatchmen = filteredRanges(startingDays, endDays);
+        daysWithwatchmen = filteredRanges(startingDays, endDays).length;
     }
-    return daysWithwatchmen.length;
+    return daysWithwatchmen;
 }
 
 function filteredRanges(startingDays, endDays) {
